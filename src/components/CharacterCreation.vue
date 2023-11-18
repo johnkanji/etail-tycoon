@@ -7,7 +7,7 @@ const state = useGlobalState()
 let allImages = []
 for (let i = 1; i <= 8; i++) {
   for (let j = 1; j <= 8; j++) {
-    allImages.push(`../../images/avatars/image${i}x${j}.png`)
+    allImages.push(`/images/avatars/image${i}x${j}.png`)
   }
 }
 allImages = shuffle(allImages)
