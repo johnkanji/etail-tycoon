@@ -1,9 +1,9 @@
 {
-  "name": "vue",
-  "description": "Include Bootstrap's source Sass and individual JavaScript plugins with Vue and Vite.",
+  "name": "etail-tycoon",
+  "description": "",
   "version": "0.0.0",
-  "private": true,
-  "repository": "twbs/examples",
+  "private": false,
+  "repository": "johnkanji/etail-tycoon",
   "license": "MIT",
   "stackblitz": {
     "startCommand": "npm start"
