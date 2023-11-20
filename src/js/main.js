@@ -18,7 +18,7 @@ import '../scss/styles.scss'
 const routes = [
   { path: '/', component: MainMenu },
   { path: '/dashboard', component: Dashboard },
-  { path: '/board', component: Board },
+  { path: '/directors', component: Board },
   { path: '/sales', component: Sales },
   { path: '/finance', component: Finance },
   { path: '/employees', component: Employees },
