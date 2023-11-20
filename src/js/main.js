@@ -4,6 +4,7 @@ import { Popover } from 'bootstrap';
 
 import App from './App.vue'
 import MainMenu from '../pages/MainMenu.vue'
+import Board from '../pages/Board.vue'
 import Dashboard from '../pages/Dashboard.vue'
 import Sales from '../pages/Sales.vue'
 import Finance from '../pages/Finance.vue'
@@ -17,6 +18,7 @@ import '../scss/styles.scss'
 const routes = [
   { path: '/', component: MainMenu },
   { path: '/dashboard', component: Dashboard },
+  { path: '/board', component: Board },
   { path: '/sales', component: Sales },
   { path: '/finance', component: Finance },
   { path: '/employees', component: Employees },
