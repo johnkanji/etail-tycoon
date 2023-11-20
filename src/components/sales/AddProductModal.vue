@@ -50,7 +50,7 @@ function removeProduct(product) {
               <tbody>
                 <tr v-for="product in productOptions">
                   <td class="p-0" scope="row">
-                    <img :src="`../../images/products/${product.image}.jpg`" class="product-thumb img-fluid">
+                    <img :src="`/etail-tycoon/images/products/${product.image}.jpg`" class="product-thumb img-fluid">
                   </td>
                   <td>{{ product.name }}</td>
                   <td>{{ product.category }}</td>

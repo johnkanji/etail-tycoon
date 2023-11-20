@@ -5,7 +5,7 @@ const props = defineProps(['type', 'name', 'level'])
 <template>
     <div class="card text-center">
         <figure class="facility-fig">
-            <img :src="`../../images/buildings/${props.type}.jpg`" class="figure-img img-fluid rounded">
+            <img :src="`/etail-tycoon/images/buildings/${props.type}.jpg`" class="figure-img img-fluid rounded">
         </figure>
         <figcaption>{{ props.name }}</figcaption>
         <StarRating stars="1" of="3" />

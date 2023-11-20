@@ -5,7 +5,7 @@
 <template>
   <tr>
     <td class="p-0" scope="row">
-      <img :src="`../../images/products/${props.image}.jpg`" class="product-thumb img-fluid">
+      <img :src="`/etail-tycoon/images/products/${props.image}.jpg`" class="product-thumb img-fluid">
     </td>
     <td>{{ props.name }}</td>
     <td>{{ props.category }}</td>
