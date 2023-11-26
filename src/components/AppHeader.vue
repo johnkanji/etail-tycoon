@@ -17,13 +17,13 @@ const state = useGlobalState()
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link class="nav-link" to="/dashboard">Dashboard</router-link>
+            <router-link id="step-0" class="nav-link" to="/dashboard">Dashboard</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/directors">Directors</router-link>
+            <router-link id="step-1" class="nav-link" to="/directors">Directors</router-link>
           </li>
           <li class="nav-item">
-            <router-link id="sales-link" class="nav-link" to="/sales">Sales</router-link>
+            <router-link id="step-2" class="nav-link" to="/sales">Sales</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/finance">Finance</router-link>
