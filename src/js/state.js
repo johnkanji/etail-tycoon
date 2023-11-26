@@ -15,7 +15,16 @@ const initialState = {
 
     tutorial: {
         enabled: true,
-        stage: 1
+        step: -1,
+        advanceTutorial: function() {
+            console.log(this)
+            this.step++;
+        },
+        previousTutorial: function() {
+            if (this.step > 0) {
+                this.step--;
+            }
+        }
     },
 
     products: [],

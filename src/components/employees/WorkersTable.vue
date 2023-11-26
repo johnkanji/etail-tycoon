@@ -16,11 +16,11 @@ if (props.hideEmptyJobs === '') {
 <template>
     <div class="workerTable">
         <div class="workerTableHeader d-flex justify-content-between mb-2">
-        <h5 class="my-auto">Workers</h5>
-        <div v-if="props.hideEditButton !== ''">
-            <button v-if="!editMode" @click="editMode = true" type="button" class="btn btn-primary btn-sm">Edit</button>
-            <button v-if="editMode" type="button" @click="editMode = false" class="btn btn-success btn-sm">Save</button>
-        </div>
+            <h5 class="my-auto">Workers</h5>
+            <div v-if="props.hideEditButton !== ''">
+                <button v-if="!editMode" @click="editMode = true" type="button" class="btn btn-primary btn-sm">Edit</button>
+                <button v-if="editMode" type="button" @click="editMode = false" class="btn btn-success btn-sm">Save</button>
+            </div>
         </div>
         <hr>
         <table class="table table-bordered">

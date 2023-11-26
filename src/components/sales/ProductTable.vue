@@ -10,7 +10,7 @@ const props = defineProps(['hideEditButton'])
   <div class="productTable mb-4">
     <div class="productTableHeader d-flex justify-content-between mb-2">
       <h5 class="my-auto">Products ({{ state.products.length }}/1)</h5>
-      <button v-if="props.hideEditButton !== ''" type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
+      <button v-if="props.hideEditButton !== ''" id="step-3" type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
         <i class="bi bi-plus"></i>Add
       </button>
     </div>

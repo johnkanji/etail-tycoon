@@ -3,6 +3,16 @@ import { useGlobalState } from '../js/state';
 import { nextWeek } from '../js/game'
 
 const state = useGlobalState()
+const clickTutorial = () => {
+  if (state.value.tutorial.step === 0) { state.value.tutorial.advanceTutorial() }
+}
+const clickDirectors = () => {
+  if (state.value.tutorial.step === 1) { state.value.tutorial.advanceTutorial() }
+}
+const clickSales = () => {
+  if (state.value.tutorial.step === 2) { state.value.tutorial.advanceTutorial() }
+}
+
 </script>
 
 <template>
@@ -17,13 +27,13 @@ const state = useGlobalState()
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link id="step-0" class="nav-link" to="/dashboard">Dashboard</router-link>
+            <router-link class="nav-link" to="/dashboard">Dashboard</router-link>
           </li>
           <li class="nav-item">
-            <router-link id="step-1" class="nav-link" to="/directors">Directors</router-link>
+            <router-link id="step-1" class="nav-link" to="/directors" @click="clickDirectors">Directors</router-link>
           </li>
           <li class="nav-item">
-            <router-link id="step-2" class="nav-link" to="/sales">Sales</router-link>
+            <router-link id="step-2" class="nav-link" to="/sales" @click="clickSales">Sales</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/finance">Finance</router-link>
@@ -36,7 +46,8 @@ const state = useGlobalState()
           </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#tutorialOffcanvas">Show Tutorial</button>
+      <button type="button" class="btn btn-primary me-3">{{state.tutorial.step}}</button>
+      <button id="step-0" type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#tutorialOffcanvas" @click="clickTutorial">Show Tutorial</button>
       <button class="btn btn-lg btn-primary" type="button" @click="nextWeek">
         Next Week
         <i class="bi bi-arrow-right"></i>

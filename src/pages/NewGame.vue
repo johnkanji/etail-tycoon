@@ -7,10 +7,10 @@ const state = useGlobalState()
 const router = useRouter()
 
 function startTutorial() {
-  console.log('start tutorial')
   const state = useGlobalState()
   state.value.products = []
   state.value.tutorial.enabled = true
+  state.value.tutorial.advanceTutorial()
   router.push('/dashboard')
 }
 
@@ -36,10 +36,10 @@ function startTutorial() {
                 Dear {{ state.player.name }},
               </p>
               <p>
-                Welcome to YourRetailCo! As the newly appointed CEO, you're poised to lead our online retail empire. Get ready to navigate the intricacies of product curation, budget management, and team assembly, as your decisions shape YourRetailCo's destiny.
+                Welcome to eTail Tycoon! With you as our newly appointed CEO, we're poised to lead our online retail empire. Get ready to navigate the intricacies of product curation, budget management, and team assembly, as your decisions shape eTail Tycoon's destiny.
               </p>
               <p>
-                Before you begin, the Board of Directors offers a tailored training session. This brief onboarding experience will equip you with essential insights, ensuring you're ready to optimize business acumen and position YourRetailCo for unprecedented success.
+                Before you begin, the Board of Directors offers a tailored training session. This brief onboarding experience will equip you with essential insights, ensuring you're ready to optimize business acumen and position eTail Tycoon for unprecedented success.
               </p>
               <p>
                 Are you prepared for the challenges that lie ahead?
@@ -47,7 +47,7 @@ function startTutorial() {
               <p>
                 Best,
                 <br>
-                YourRetailCo Board of Directors
+                eTail Tycoon Board of Directors
               </p>
             </div>
             <div class="d-flex flex-column col-sm-5 mx-auto mt-5">
