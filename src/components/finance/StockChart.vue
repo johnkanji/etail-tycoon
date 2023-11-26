@@ -7,7 +7,7 @@ ChartJS.register(Title, Tooltip, Legend, PointElement, LineElement, CategoryScal
 const chartData = ref({
     labels: [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ],
     datasets: [{
-        label: '$AMZN',
+        label: '$ETYN',
         data: [120, 118, 123, 119, 89, 92, 89, 93, 90, 100],
         backgroundColor: 'goldenrod',
         borderColor: 'goldenrod',

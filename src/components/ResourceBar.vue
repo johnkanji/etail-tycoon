@@ -20,6 +20,9 @@ const stockDisplay = computed(() => { return currencyFormatter.format(state.stoc
 </script>
 <template>
     <div class="d-flex mt-2">
+        <ResourceDisplay info="Current Date" icon="bi-calendar2-date" badge-type="secondary">
+            {{ dateDisplay }}
+        </ResourceDisplay>
         <ResourceDisplay id="step-10" info="Customer Satisfaction" icon="bi-heart-fill" badge-type="danger">
             <SatisfactionIcon class="fs-5" value="2"/>
         </ResourceDisplay>
