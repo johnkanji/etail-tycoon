@@ -12,6 +12,13 @@ const clickDirectors = () => {
 const clickSales = () => {
   if (state.value.tutorial.step === 2) { state.value.tutorial.advanceTutorial() }
 }
+const clickEmployees = () => {
+  if (state.value.tutorial.step === 4) { state.value.tutorial.advanceTutorial() }
+}
+const clickNextWeek = () => {
+  nextWeek()
+  if (state.value.tutorial.step === 6) { state.value.tutorial.advanceTutorial() }
+}
 
 </script>
 
@@ -39,16 +46,18 @@ const clickSales = () => {
             <router-link class="nav-link" to="/finance">Finance</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/employees">Employees</router-link>
+            <router-link id="step-4" class="nav-link" to="/employees" @click="clickEmployees">Employees</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/operations">Operations</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/dashboard">Marketing</router-link>
+          </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-primary me-3">{{state.tutorial.step}}</button>
       <button id="step-0" type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#tutorialOffcanvas" @click="clickTutorial">Show Tutorial</button>
-      <button class="btn btn-lg btn-primary" type="button" @click="nextWeek">
+      <button id="step-6" class="btn btn-lg btn-primary" type="button" @click="clickNextWeek">
         Next Week
         <i class="bi bi-arrow-right"></i>
       </button>

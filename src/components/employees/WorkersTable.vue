@@ -12,14 +12,19 @@ let workerFilter = (w) => true
 if (props.hideEmptyJobs === '') {
     workerFilter = (w) => w.num_employed > 0
 }
+
+const clickSave = () => {
+  if (state.value.tutorial.step === 5) { state.value.tutorial.advanceTutorial() }
+}
+
 </script>
 <template>
     <div class="workerTable">
         <div class="workerTableHeader d-flex justify-content-between mb-2">
             <h5 class="my-auto">Workers</h5>
             <div v-if="props.hideEditButton !== ''">
-                <button v-if="!editMode" @click="editMode = true" type="button" class="btn btn-primary btn-sm">Edit</button>
-                <button v-if="editMode" type="button" @click="editMode = false" class="btn btn-success btn-sm">Save</button>
+                <button v-if="!editMode" id="step-5" @click="editMode = true" type="button" class="btn btn-primary btn-sm">Hire</button>
+                <button v-if="editMode" type="button" @click="editMode = false; clickSave()" class="btn btn-success btn-sm">Save</button>
             </div>
         </div>
         <hr>

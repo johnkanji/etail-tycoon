@@ -19,6 +19,10 @@ function removeProduct(product) {
   }
 }
 
+const clickSave = () => {
+  if (state.value.tutorial.step === 3) { state.value.tutorial.advanceTutorial() }
+}
+
 </script>
 <template>
   <div class="modal fade" id="addProductModal" tabindex="-1">
@@ -70,7 +74,7 @@ function removeProduct(product) {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+          <button type="button" class="btn btn-primary" @click="clickSave" data-bs-dismiss="modal">Save changes</button>
         </div>
       </div>
     </div>

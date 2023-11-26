@@ -20,16 +20,16 @@ const stockDisplay = computed(() => { return currencyFormatter.format(state.stoc
 </script>
 <template>
     <div class="d-flex mt-2">
-        <ResourceDisplay info="Customer Satisfaction" icon="bi-heart-fill" badge-type="danger">
+        <ResourceDisplay id="step-10" info="Customer Satisfaction" icon="bi-heart-fill" badge-type="danger">
             <SatisfactionIcon class="fs-5" value="2"/>
         </ResourceDisplay>
-        <ResourceDisplay info="Public Image" icon="bi-people-fill" badge-type="warning">
+        <ResourceDisplay id="step-9" info="Public Image" icon="bi-people-fill" badge-type="warning">
             <StarRating stars="2.5" of="3"></StarRating>
         </ResourceDisplay>
-        <ResourceDisplay info="Cash Reserves" icon="bi-cash-stack" badge-type="success">
+        <ResourceDisplay id="step-8" info="Budget" icon="bi-cash-stack" badge-type="success">
             {{ cashDisplay }}
         </ResourceDisplay>
-        <ResourceDisplay info="Stock Price" icon="bi-graph-up" badge-type="primary">
+        <ResourceDisplay id="step-7" info="Stock Price" icon="bi-graph-up" badge-type="primary">
             {{ stockDisplay }}
         </ResourceDisplay>
     </div>

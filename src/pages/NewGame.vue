@@ -10,7 +10,7 @@ function startTutorial() {
   const state = useGlobalState()
   state.value.products = []
   state.value.tutorial.enabled = true
-  state.value.tutorial.advanceTutorial()
+  state.value.tutorial.step = 0
   router.push('/dashboard')
 }
 
@@ -36,7 +36,7 @@ function startTutorial() {
                 Dear {{ state.player.name }},
               </p>
               <p>
-                Welcome to eTail Tycoon! With you as our newly appointed CEO, we're poised to lead our online retail empire. Get ready to navigate the intricacies of product curation, budget management, and team assembly, as your decisions shape eTail Tycoon's destiny.
+                Welcome to eTail Tycoon! With you as our newly appointed CEO, we're poised to have you lead our online retail empire. Get ready to navigate the intricacies of product curation, budget management, and team assembly, as your decisions shape eTail Tycoon's destiny.
               </p>
               <p>
                 Before you begin, the Board of Directors offers a tailored training session. This brief onboarding experience will equip you with essential insights, ensuring you're ready to optimize business acumen and position eTail Tycoon for unprecedented success.

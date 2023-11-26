@@ -15,9 +15,8 @@ const initialState = {
 
     tutorial: {
         enabled: true,
-        step: -1,
+        step: 0,
         advanceTutorial: function() {
-            console.log(this)
             this.step++;
         },
         previousTutorial: function() {
