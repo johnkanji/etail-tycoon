@@ -24,5 +24,5 @@ responsive: true
 })
 </script>
 <template>
-    <Doughnut id="revenue-chart" :options="chartOptions" :data="chartData" />
+    <Doughnut id="salesChart" :options="chartOptions" :data="chartData" />
 </template>

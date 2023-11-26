@@ -3,6 +3,8 @@ import { computed } from 'vue'
 import { useGlobalState } from '../js/state.js';
 
 import ResourceDisplay from './ResourceDisplay.vue';
+import SatisfactionIcon from './SatisfactionIcon.vue';
+import StarRating from './StarRating.vue';
 
 const state = useGlobalState().value
 
@@ -18,9 +20,17 @@ const stockDisplay = computed(() => { return currencyFormatter.format(state.stoc
 </script>
 <template>
     <div class="d-flex mt-2">
-        <ResourceDisplay :text="dateDisplay" info="Current Date" icon="bi-calendar2-week" badge-type="danger"/>
-        <ResourceDisplay :text="employeesDisplay" info="Total Employees" icon="bi-people-fill" badge-type="warning"/>
-        <ResourceDisplay :text="cashDisplay" info="Cash Reserves" icon="bi-cash-stack" badge-type="success"/>
-        <ResourceDisplay :text="stockDisplay" info="Stock Price" icon="bi-graph-up" badge-type="primary"/>
+        <ResourceDisplay info="Customer Satisfaction" icon="bi-heart-fill" badge-type="danger">
+            <SatisfactionIcon class="fs-5" value="2"/>
+        </ResourceDisplay>
+        <ResourceDisplay info="Public Image" icon="bi-people-fill" badge-type="warning">
+            <StarRating stars="2.5" of="3"></StarRating>
+        </ResourceDisplay>
+        <ResourceDisplay info="Cash Reserves" icon="bi-cash-stack" badge-type="success">
+            {{ cashDisplay }}
+        </ResourceDisplay>
+        <ResourceDisplay info="Stock Price" icon="bi-graph-up" badge-type="primary">
+            {{ stockDisplay }}
+        </ResourceDisplay>
     </div>
 </template>

@@ -1,7 +1,8 @@
 <script setup>
 import PageTitle from '../components/PageTitle.vue';
 import AddProductModal from '../components/sales/AddProductModal.vue';
-import ProductList from '../components/sales/ProductList.vue';
+import ProductTable from '../components/sales/ProductTable.vue';
+import SalesChart from '../components/sales/SalesChart.vue';
 
 </script>
 <template>
@@ -9,9 +10,11 @@ import ProductList from '../components/sales/ProductList.vue';
     <PageTitle>Sales</PageTitle>
     <div class="row">
       <div class="col-5 mx-auto">
-        <ProductList />
+        <ProductTable />
       </div>
-      <div class="col-5 mx-auto"></div>
+      <div class="col-5 mx-auto">
+        <SalesChart/>
+      </div>
     </div>
   </main>
   <AddProductModal />

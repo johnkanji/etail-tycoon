@@ -46,6 +46,11 @@ if (props.hideEmptyJobs === '') {
                     </td>
                     <td class="text-center"><SatisfactionIcon :value='worker.satisfaction' /></td>
                 </tr>
+                <tr v-if="state.employees.workers.filter(workerFilter).length === 0">
+                    <td colspan="6" class="text-center">
+                        Nothing to show here. Hire workers on the <router-link to="/employees">Employees</router-link> page.
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>

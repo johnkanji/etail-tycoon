@@ -13,7 +13,7 @@ onMounted(() => {
     <h4 class="me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" :data-bs-title="props.info">
         <div :class="'badge bg-' + props.badgeType">
             <i :class="'bi ' + props.icon"></i>
-            {{ props.text }}
+            <slot></slot>
         </div>
     </h4>
 </template>

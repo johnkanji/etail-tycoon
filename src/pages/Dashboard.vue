@@ -1,10 +1,10 @@
 <script setup>
 import PageTitle from '../components/PageTitle.vue';
-import ProductList from '../components/sales/ProductList.vue'
 import { useGlobalState } from '../js/state';
+import ProductTable from '../components/sales/ProductTable.vue';
 import WorkersTable from '../components/employees/WorkersTable.vue';
-import ProfitChart from '../components/finance/ProfitChart.vue';
-import RevenueChart from '../components/finance/RevenueChart.vue';
+import CashflowChart from '../components/finance/CashflowChart.vue';
+import StockChart from '../components/finance/StockChart.vue';
 
 const state = useGlobalState()
 
@@ -20,18 +20,12 @@ const state = useGlobalState()
     </section> -->
     <div class="row mb-3">
       <div class="col-5 mx-auto">
-        <ProductList hideEditButton />
+        <ProductTable hideEditButton />
+        <CashflowChart />
       </div>
       <div class="col-5 mx-auto">
+        <StockChart/>
         <WorkersTable hideEditButton hideEmptyJobs />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-5 mx-auto">
-        <RevenueChart />
-      </div>
-      <div class="col-5 mx-auto">
-        <ProfitChart />
       </div>
     </div>
   </main>

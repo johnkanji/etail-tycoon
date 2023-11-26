@@ -8,9 +8,7 @@ const state = useGlobalState()
 const productOptions = slice(shuffle(products), 0, 5)
 
 const addProduct = (product) => {
-
-
-  if (!includes(state.value.products.map(p => p.name), product.name) && state.value.products.length < 3) {
+  if (!includes(state.value.products.map(p => p.name), product.name) && state.value.products.length < 1) {
     state.value.products.push(product)
   }
 }

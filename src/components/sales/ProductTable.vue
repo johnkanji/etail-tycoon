@@ -1,15 +1,15 @@
 <script setup>
 import { useGlobalState } from '../../js/state';
-import ProductListItem from './ProductListItem.vue';
+import ProductListItem from './ProductTableItem.vue';
 
 const state = useGlobalState()
 const props = defineProps(['hideEditButton'])
 
 </script>
 <template>
-  <div class="productTable">
+  <div class="productTable mb-4">
     <div class="productTableHeader d-flex justify-content-between mb-2">
-      <h5 class="my-auto">Products ({{ state.products.length }}/3)</h5>
+      <h5 class="my-auto">Products ({{ state.products.length }}/1)</h5>
       <button v-if="props.hideEditButton !== ''" type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
         <i class="bi bi-plus"></i>Add
       </button>
@@ -27,9 +27,20 @@ const props = defineProps(['hideEditButton'])
         </tr>
       </thead>
       <tbody>
-        <td v-if="state.products.length === 0" colspan="6" class="text-center">Nothing to show here.</td>
+        <tr v-if="state.products.length === 0">
+          <td colspan="6" class="text-center">
+            Nothing to show here. Choose products to sell on the <router-link to="/sales">Sales</router-link> page.
+          </td>
+        </tr>
         <ProductListItem v-for="product in state.products" v-bind="product" />
       </tbody>
     </table>
   </div>
 </template>
+<style lang="scss" scoped>
+  .productTable {
+    a {
+      padding: 0;
+    }
+  }
+</style>

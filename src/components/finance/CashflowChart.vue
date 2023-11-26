@@ -37,5 +37,9 @@ responsive: true
 })
 </script>
 <template>
-    <Bar id="profit-chart" :options="chartOptions" :data="chartData" />
+  <div class="cashflowChartHeader d-flex justify-content-between mb-2">
+    <h5 class="my-auto">Cash Flow</h5>
+  </div>
+  <hr>
+  <Bar id="cashflowChart" :options="chartOptions" :data="chartData" />
 </template>

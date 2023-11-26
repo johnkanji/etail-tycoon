@@ -3,7 +3,7 @@ import { computed } from 'vue'
 
 const props = defineProps(['value'])
 const emoji = computed(() => {
-    switch (props.value) {
+    switch (Number(props.value)) {
         case 1:
             return '😡'
         case 2:
@@ -20,5 +20,5 @@ const emoji = computed(() => {
 })
 </script>
 <template>
-    <span class="fs-2">{{ emoji }}</span>
+    <span>{{ emoji }}</span>
 </template>

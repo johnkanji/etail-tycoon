@@ -1,6 +1,6 @@
 <script setup>
 import PageTitle from '../components/PageTitle.vue';
-import ProfitChart from '../components/finance/ProfitChart.vue'
+import CashflowChart from '../components/finance/CashflowChart.vue'
 import CashFlowTable from '../components/finance/CashFlowTable.vue';
 </script>
 <template>
@@ -16,7 +16,7 @@ import CashFlowTable from '../components/finance/CashFlowTable.vue';
       </div>
       <div class="col-6">
         <h4 class="mb-4">Profit/Loss</h4>
-        <ProfitChart class="ps-3 pb-3" />
+        <CashflowChart class="ps-3 pb-3" />
       </div>
     </div>
 
