@@ -1,5 +1,5 @@
 <script setup>
-import ResourceBar from './ResourceBar.vue';
+import ResourceBar from './resource_bar/ResourceBar.vue';
 
 // const props = defineProps(['title'])
 </script>

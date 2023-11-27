@@ -20,5 +20,4 @@ export const nextWeek = () => {
 
     // const weeklyExecPayroll = sum(state.value.employees.executives.map(e => e.salary))
     const weeklyWorkerPayroll = state.value.employees.workers.map(w => w.num_employed * 40 * w.wage)
-    console.log(weeklyWorkerPayroll)
 }

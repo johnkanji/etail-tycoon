@@ -11,5 +11,4 @@ import TutorialSidebar from '../components/TutorialSidebar.vue';
     <router-view></router-view>
     <Footer />
   </div>
-  <Tutorials />
 </template>

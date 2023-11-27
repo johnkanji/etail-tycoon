@@ -2,7 +2,7 @@ import { createGlobalState, useStorage } from "@vueuse/core";
 import { merge } from 'lodash'
 
 const initialState = {
-    cash: 1000000,
+    cash: 50000,
     stock_price: 100,
     customer_satisfaction: 3,
     quarter: 1,

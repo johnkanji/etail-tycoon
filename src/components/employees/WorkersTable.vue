@@ -7,7 +7,6 @@ const props = defineProps(['hideEditButton', 'hideEmptyJobs'])
 const editMode = ref(false)
 
 const state = useGlobalState()
-console.log(props)
 let workerFilter = (w) => true
 if (props.hideEmptyJobs === '') {
     workerFilter = (w) => w.num_employed > 0
