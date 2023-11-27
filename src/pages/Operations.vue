@@ -5,7 +5,7 @@ import FacilityAdd from '../components/operations/FacilityAdd.vue';
 </script>
 <template>
   <main role="main" class="container">
-    <PageTitle>Operations</PageTitle>/>
+    <PageTitle>Operations</PageTitle>
 
     <div class="row">
       <div class="col-6 border-end">
@@ -15,7 +15,7 @@ import FacilityAdd from '../components/operations/FacilityAdd.vue';
             Warehouses
           </h4>
           <div class="d-flex pe-3 pb-3">
-            <FacilityCard type="warehouse" name="Warehouse 1" level="1" />
+            <FacilityCard type="warehouse" name="Garage Warehouse" level="1" />
             <FacilityAdd type="warehouse" />
           </div>
         </section>
@@ -23,7 +23,6 @@ import FacilityAdd from '../components/operations/FacilityAdd.vue';
         <section>
           <h4 class="mb-4"><i class="bi bi-hdd-rack" style="width: 1em; margin-right: 0.5em"></i>Data Centres</h4>
           <div class="d-flex pe-3 pb-3">
-            <FacilityCard type="data_centre" name="Data Centre 1" level="1" />
             <FacilityAdd type="data_centre" />
           </div>
         </section>
@@ -32,7 +31,6 @@ import FacilityAdd from '../components/operations/FacilityAdd.vue';
         <section>
           <h4 class="mb-4"><i class="bi bi-headset" style="width: 1em; margin-right: 0.5em"></i>Call Centers</h4>
           <div class="d-flex pe-3 pb-3">
-            <FacilityCard type="call_centre" name="Call Centre 1" level="1" />
             <FacilityAdd type="call_centre" />
           </div>
         </section>
@@ -40,7 +38,7 @@ import FacilityAdd from '../components/operations/FacilityAdd.vue';
         <section>
           <h4 class="mb-4"><i class="bi bi-buildings" style="width: 1em; margin-right: 0.5em"></i>Offices</h4>
           <div class="d-flex pe-3 pb-3">
-            <FacilityCard type="office" name="Office" level="1" />
+            <FacilityCard type="office" name="Bedroom Office" level="1" />
             <FacilityAdd type="office" />
           </div>
         </section>

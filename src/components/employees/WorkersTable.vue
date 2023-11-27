@@ -44,11 +44,10 @@ const clickSave = () => {
                         <span v-else>{{ worker.num_employed }}</span>
                     </td>
                     <td class="text-end d-flex">
-                        
                         <input v-if="editMode" type="range" class="form-range me-3" for="workerWage" min="5" max="50" step="0.5" v-model="worker.wage">
                         {{ currencyFormatter.format(worker.wage) }}
                     </td>
-                    <td class="text-center"><SatisfactionIcon :value='worker.satisfaction' /></td>
+                    <td class="text-center"><SatisfactionIcon v-if="worker.num_employed > 0" :value='worker.satisfaction' /></td>
                 </tr>
                 <tr v-if="state.employees.workers.filter(workerFilter).length === 0">
                     <td colspan="6" class="text-center">

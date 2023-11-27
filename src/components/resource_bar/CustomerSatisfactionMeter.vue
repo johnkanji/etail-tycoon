@@ -24,7 +24,7 @@ onMounted(() => {
 
 </script>
 <template>
-    <h4 class="me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Public Image">
+    <h4 class="me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Customer Satisfaction">
         <div class="badge bg-danger">
             <i class="bi bi-heart-fill"></i>
             <SatisfactionIcon class="fs-5 ms-1" value="2"/>

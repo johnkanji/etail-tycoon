@@ -34,12 +34,12 @@ const initialState = {
             title: 'Warehouse Packer',
             num_employed: 0,
             wage: 6.5,
-            satisfaction: null
+            satisfaction: 2
         }, {
             title: 'Delivery Driver',
             num_employed: 0,
             wage: 7.50,
-            satisfaction: null
+            satisfaction: 3
         }, {
             title: 'Customer Service Agent',
             num_employed: 0,

@@ -12,12 +12,15 @@ const state = useGlobalState()
     <PageTitle>Employees</PageTitle>
     <section class="px-4">
       <div class="row">
-        <div class="col-5 mx-auto">
+        <div class="col-6 mx-auto">
           <WorkersTable/>
         </div>
         <div class="col-5 mx-auto">
           <div class="workerTableHeader d-flex justify-content-between mb-2">
             <h5 class="my-auto">Executives</h5>
+            <div>
+                <button type="button" class="btn btn-primary btn-sm" disabled>Hire</button>
+            </div>
           </div>
           <hr>
           <div class="d-inline-flex justify-content-start">
